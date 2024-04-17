@@ -372,7 +372,7 @@ const Reports = () => {
                         )}
                         {attendanceQuantity &&
                             attendanceLabel?.map((item, index) => (
-                                <p>
+                                <p key={index}>
                                     {item}: {attendanceQuantity[index]}
                                 </p>
                             ))}

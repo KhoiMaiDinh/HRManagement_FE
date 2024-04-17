@@ -202,25 +202,20 @@ const CommentForm = () => {
         }
     };
     useEffect(() => {
-        console.log('idAllowanceeeeee',idAllowance)
+        console.log("idAllowanceeeeee", idAllowance);
     }, [idAllowance]);
     const salaryFunction = (id: string) => {
         setIdAllowance([]);
-        const comment = empComments.find(
-            (comment) => comment._id === id
-        );
-        if (comment?.calculatedSalary === 'Not yet')
-            {
-                setSelectedEmp(comment?.revieweeId);
-                console.log({ selectedEmp });
-                onOpen();
-            }
-        else
+        const comment = empComments.find((comment) => comment._id === id);
+        if (comment?.calculatedSalary === "Not yet") {
+            setSelectedEmp(comment?.revieweeId);
+            console.log({ selectedEmp });
+            onOpen();
+        } else
             toast({
                 title: `Error`,
                 description: `This comment have been used to calculate salary`,
             });
-        
     };
     const calculateSalary = async () => {
         setIsLoading(true);
@@ -336,7 +331,7 @@ const CommentForm = () => {
             <div className="flex flex-1 flex-col bg-white dark:bg-dark min-h-unit-3 items-start py-16 gap-2 shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)] rounded-lg w-[90%] self-center">
                 <div className=" flex w-full px-16 gap-x-3 items-end justify-between">
                     <div className="text-[#2C3D3A] dark:text-button block text-3xl font-semibold">
-                        Personal's comments
+                        {"Personal's comments"}
                     </div>
                 </div>
                 <div className="w-[95%] self-center flex">
@@ -350,7 +345,7 @@ const CommentForm = () => {
                 <div className="flex flex-1 flex-col bg-white dark:bg-dark min-h-unit-3 items-start py-16 gap-2 shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)] rounded-lg w-[90%] self-center">
                     <div className=" flex w-full px-16 gap-x-3 items-end justify-between">
                         <div className="text-[#2C3D3A] dark:text-button block text-3xl font-semibold">
-                            Employee's comments
+                            {"Employee's comments"}
                         </div>
                         <div className=" flex gap-x-3 items-end">
                             <CustomDropdown

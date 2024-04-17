@@ -64,11 +64,9 @@ const ForgotPasswordForm = (props: Props) => {
                 console.log("err", err.response.data);
                 setVisible(true);
                 setErrorMessage(err.response.data.error);
-            }
-            finally {
+            } finally {
                 setIsLoading(false);
             }
-            
         },
     });
 
@@ -79,7 +77,6 @@ const ForgotPasswordForm = (props: Props) => {
         // Prefetch the dashboard page
         router.prefetch("/");
     }, [router]);
-
 
     return (
         <main className="flex bg-center h-screen w-screen flex-col items-center justify-center p-5 bg-no-repeat bg-fixed bg-cover bg-[url('../../public/assets/images/background.png')] min-h-[75%]">
@@ -101,9 +98,7 @@ const ForgotPasswordForm = (props: Props) => {
                         label="Email"
                     />
                     {errors.email && touched.email && (
-                        <span className={errorClassName}>
-                            {errors.email}
-                        </span>
+                        <span className={errorClassName}>{errors.email}</span>
                     )}
 
                     <div className="w-full mt-3 h-10 flex mt-5">

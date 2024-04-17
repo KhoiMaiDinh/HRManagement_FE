@@ -184,7 +184,7 @@ const SalaryReports = () => {
                 setTotalSalary(res.data.firmSalaries);
             } catch (e) {
                 console.log({ e });
-                
+
                 setAttendanceLabel(undefined);
                 setAttendanceRatio(undefined);
                 setSalaryQuantity(undefined);
@@ -397,7 +397,11 @@ const SalaryReports = () => {
                 </h2>
                 <div className="flex flex-1 justify-between px-5 self-center w-full">
                     {!totalSalary && (
-                        <p>Not all employee's salaries are calculated, please calculate salary for the rest</p>
+                        <p>
+                            {
+                                "Not all employee's salaries are calculated, please calculate salary for the rest"
+                            }
+                        </p>
                     )}
                     <div className="flex flex-col justify-center">
                         {totalSalary && (
@@ -405,7 +409,7 @@ const SalaryReports = () => {
                         )}
                         {salaryQuantity &&
                             attendanceLabel?.map((item, index) => (
-                                <p>
+                                <p key={index}>
                                     {item}:{" "}
                                     {toVND(salaryQuantity[index].toString())}
                                 </p>

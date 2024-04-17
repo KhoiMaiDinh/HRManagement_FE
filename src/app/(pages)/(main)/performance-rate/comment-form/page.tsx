@@ -238,15 +238,15 @@ const CommentForm = () => {
                 res.data = res.data.filter((emp) => {
                     return emp._id != session?.user._id;
                 });
-                
+
                 setEmployees(res.data);
-                console.log({employees})
+                console.log({ employees });
             } catch (e) {
                 console.log(e);
             }
         };
         getEmployees();
-        console.log({employees})
+        console.log({ employees });
     }, [selectedMonth]);
 
     useEffect(() => {
@@ -262,7 +262,11 @@ const CommentForm = () => {
                     emp.revieweeName = emp.revieweeId.name;
                     emp.revieweeCode = emp.revieweeId.code;
                     const day = new Date(emp.commentMonth);
-                    const reviewDay = new Date(day.getFullYear(), day.getMonth()+1, day.getDate());
+                    const reviewDay = new Date(
+                        day.getFullYear(),
+                        day.getMonth() + 1,
+                        day.getDate()
+                    );
                     emp.reviewDay = format(reviewDay, "dd/MM/yyyy");
                 });
                 setComments(res.data);
@@ -407,6 +411,7 @@ const CommentForm = () => {
                                     (v, k) => k + 1
                                 ).map((val) => (
                                     <button
+                                        key={val}
                                         onClick={() => {
                                             setSelectedScore(val);
                                             formik.setFieldValue("rate", val);
@@ -448,7 +453,7 @@ const CommentForm = () => {
                 <div className="flex flex-1 flex-col bg-white dark:bg-dark w-full min-h-unit-3 items-start py-16 gap-2 shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)] rounded-lg ">
                     <div className=" flex w-full px-16 gap-x-3 items-end justify-between">
                         <div className="text-[#2C3D3A] dark:text-button block text-3xl font-semibold">
-                            {tableName} 's comments
+                            {tableName} {"'"}s comments
                         </div>
                         <div className=" flex gap-x-3 items-end">
                             <Input
