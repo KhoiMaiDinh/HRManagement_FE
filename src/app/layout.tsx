@@ -4,7 +4,10 @@ import { Inter } from "next/font/google";
 import Providers from "src/components/layout/providers";
 import AuthProvider from "src/context/AuthProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
