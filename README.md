@@ -52,3 +52,13 @@ Furthermore, the management lacks an overall view of employee work hours, result
 * GitHub
 * Microsoft Excel
 </details>
+<details>
+  <summary><h2>5. Demo</h2></summary>
+
+  | No. | Username | Password | Account Type |
+|-------|-------|-------|-------|
+| 1 | mck16082003@gmail.com | Mck16082003 | Manager |
+| 2 | hien01062003@gmail.com | Xyz12345 | Employee|
+
+[Demo Link](https://hr-management-fe-rf3w.vercel.app/)
+<details>
