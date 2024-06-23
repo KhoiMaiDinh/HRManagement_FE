@@ -61,4 +61,4 @@ Furthermore, the management lacks an overall view of employee work hours, result
 | 2 | hien01062003@gmail.com | Xyz12345 | Employee|
 
 [Demo Link](https://hr-management-fe-rf3w.vercel.app/)
-<details>
+</details>
