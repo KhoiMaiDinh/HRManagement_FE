@@ -1,5 +1,5 @@
 # HumanResourceManagementProject-Team4-UIT
-
+![Poster](https://github.com/KhoiMaiDinh/HRManagement_FE/blob/master/project_hr.jpg?raw=true)
 <details>
   <summary><h2>1. Introduction</h2></summary>
   
